@@ -1,4 +1,4 @@
-#
+# -*- coding: utf-8 -*-
 # Actualizaciones financieras. Traer una cantidad de dinero del futuro a un tipo de interes dado.
 
 def actualizar_cantidad(cantidad, tipo_interes, numero_de_periodos):
