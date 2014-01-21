@@ -1,13 +1,6 @@
 #
 # Capitalizaciones financieras .. llevar dinero al futuro
-
-SEMESTRAL = 2.0
-MENSUAL = 12.0
-ANUAL = 1.0
-CUATRIMESTRAL = 3.0
-TRIMESTRAL = 4.0
-BIANUAL = 0.5
-BIMENSUAL = 6.0
+import rentas
 
 def capitalizar_cantidad_compuesto(cantidad, tipo_interes, numero_periodos):
 	cantidad_capitalizada = cantidad*(1+tipo_interes)**numero_periodos
@@ -26,7 +19,7 @@ def capitalizar_renta_compuesto(cuota, tipo_interes, numero_periodos):
 	return renta_capitalizada
 
 def interes_mensual_simple(tipo_interes_anual):
-	tipo = tipo_interes_anual/MENSUAL
+	tipo = tipo_interes_anual/ rentas.MENSUAL
 	return tipo
 
 def interes_semestral_simple(tipo_interes_anual):

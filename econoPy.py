@@ -12,7 +12,7 @@ class EcoConsole:
 		print " "
 		
 	def menu(self):
-		
+		pass
 		
 if __name__ == "__main__":
 	EcoConsole()
