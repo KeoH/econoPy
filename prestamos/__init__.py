@@ -37,3 +37,11 @@ class PrestamoFrances:
 			self.capital_vivo.append(self.capital_vivo[periodo-1]-amortizado)
 			self.total_amortizado.append(self.total_amortizado[periodo-1]+amortizado)
 
+	def pinta_cuadro(self):
+		self.calcula_cuota()
+		self.calcula_tabla_amortizacion()
+		print " "+"-"*69
+		print "| Periodo | Cuota | Capital Vivo | Cuota Interes | Cuota Amortizacion |"
+		print " "+"-"*69
+		for i in range(1, self.periodos+1):
+			print "| %d | %f | %f | %f | %f |"%(i, round(self.cuota,2), round(self.capital_vivo[i],2), round(self.cuotas_interes[i],2), round(self.cuotas_amortizacion[i],2))
