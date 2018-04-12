@@ -1,7 +1,8 @@
 
-from setuptools import setup, find_packages
 from codecs import open
 from os import path
+
+from setuptools import find_packages, setup
 
 here = path.abspath(path.dirname(__file__))
 
@@ -39,14 +40,8 @@ setup(
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
-    package_data={},
-    data_files=[],
-    entry_points={
-        'console_scripts': [],
-    },
     project_urls={
         'Bug Reports': 'https://github.com/KeoH/econoPy/issues',
-        'Funding': 'https://donate.pypi.org',
         'Source': 'https://github.com/KeoH/econoPy/',
     },
 )
