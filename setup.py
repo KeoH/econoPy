@@ -1,33 +1,52 @@
-#!/usr/bin/env python
 
-import os
-import sys
-import subprocess
-from setuptools import setup
+from setuptools import setup, find_packages
+from codecs import open
+from os import path
 
-action = sys.argv[1]
+here = path.abspath(path.dirname(__file__))
 
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
-def update_reqs():
-    """Updates requirements files."""
-    if not os.path.exists('Pipfile'):
-        return
-    subprocess.check_call('pipenv lock', shell=True)
-    subprocess.check_call(
-        'pipenv lock -r | cut -d\- -f1 > tools/pip-requires',
-        shell=True)
-    subprocess.check_call(
-        'pipenv lock --dev -r |cut -d\- -f1 > tools/test-requires',
-        shell=True)
+with open(path.join(here, 'VERSION'), encoding='utf-8') as f:
+    version = f.read()
 
+print(version)
 
-if action == "update_requirements":
-    update_reqs()
-    sys.exit(0)
-elif action == "build_sphinx":
-    subprocess.check_call('pipenv run pip install -e ".[doc]"', shell=True)
-elif 'dist' in action:
-    update_reqs()
-
-setup(setup_requires=['pbr>=1.9', 'setuptools>=17.1', 'pytest-runner'],
-      pbr=True)
+setup(
+    name='econopy', version=version,
+    description='Simple economic utilities',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url='https://github.com/KeoH/econoPy',
+    author='Francisco Manzano Magaña',
+    author_email='keoh77@gmail.com',
+    classifiers=[
+        'Development Status :: 1 - Planning',
+        'Intended Audience :: Developers',
+        'Topic :: Office/Business :: Financial :: Accounting',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7'
+    ],
+    keywords='economic,financial,business,accounting',
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    install_requires=[],
+    extras_require={
+        'dev': ['check-manifest'],
+        'test': ['coverage'],
+    },
+    package_data={},
+    data_files=[],
+    entry_points={
+        'console_scripts': [],
+    },
+    project_urls={
+        'Bug Reports': 'https://github.com/KeoH/econoPy/issues',
+        'Funding': 'https://donate.pypi.org',
+        'Source': 'https://github.com/KeoH/econoPy/',
+    },
+)

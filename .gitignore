@@ -12,6 +12,7 @@ bin
 var
 sdist
 develop-eggs
+econopy.egg-info
 .installed.cfg
 
 # Installer logs
