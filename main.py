@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 
+
 class EcoConsole:
 	
 	def __init__(self):
