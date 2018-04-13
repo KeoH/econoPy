@@ -12,7 +12,6 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 with open(path.join(here, 'VERSION'), encoding='utf-8') as f:
     version = f.read()
 
-print(version)
 
 setup(
     name='econopy', version=version,
