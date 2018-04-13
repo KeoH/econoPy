@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import rentas
 
 def interes_mensual_simple(tipo_interes_anual):

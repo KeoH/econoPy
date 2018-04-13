@@ -12,6 +12,7 @@ bin
 var
 sdist
 develop-eggs
+econopy.egg-info
 .installed.cfg
 
 # Installer logs
@@ -20,9 +21,11 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .tox
+.pytest_cache/
 
 #Translations
 *.mo
 
 #Mr Developer
 .mr.developer.cfg
+.vscode/
