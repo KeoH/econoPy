@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 SEMESTRAL = 2.0
 MENSUAL = 12.0
 ANUAL = 1.0
