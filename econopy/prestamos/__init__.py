@@ -1,4 +1,6 @@
-import rentas
+"""Prestamos module."""
+
+from econopy import rentas
 
 
 class PrestamoFrances:
