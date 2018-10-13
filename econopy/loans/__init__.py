@@ -1,7 +1,6 @@
 """Prestamos module."""
 
-from econopy import rentas
-
+from .. import ANUAL
 
 class PrestamoFrances:
 
@@ -10,7 +9,7 @@ class PrestamoFrances:
     interes_anual = 0.1
     interes = 0.01
     periodos = 1
-    tipo_periodo = rentas.ANUAL
+    tipo_periodo = ANUAL
     cuotas_interes = []
     cuotas_amortizacion = []
     capital_vivo = []
@@ -40,14 +39,3 @@ class PrestamoFrances:
                 self.capital_vivo[periodo-1]-amortizado)
             self.total_amortizado.append(
                 self.total_amortizado[periodo-1]+amortizado)
-
-    def pinta_cuadro(self):
-        self.calcula_cuota()
-        self.calcula_tabla_amortizacion()
-
-        for i in range(1, self.periodos+1):
-            print("| {} | {} | {} | {} | {} |").format(
-                i, round(self.cuota, 2), round(
-                    self.capital_vivo[i], 2), round(
-                        self.cuotas_interes[i], 2), round(
-                            self.cuotas_amortizacion[i], 2))
