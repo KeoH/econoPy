@@ -13,6 +13,7 @@ pytest = "*"
 pytest-cov = "*"
 "pytest-flake8" = "*"
 tox = "*"
+sphinx = "*"
 
 [requires]
 python_version = "3.6"

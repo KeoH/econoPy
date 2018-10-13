@@ -31,3 +31,6 @@ coverage.xml
 #Mr Developer
 .mr.developer.cfg
 .vscode/
+
+# Docs
+docs/_build
