@@ -1,6 +1,6 @@
 """Tipos module."""
 
-from .. import MENSUAL, SEMESTRAL, CUATRIMESTRAL, TRIMESTRAL
+from . import MENSUAL, SEMESTRAL, CUATRIMESTRAL, TRIMESTRAL
 
 
 def interes_mensual_simple(rate):
