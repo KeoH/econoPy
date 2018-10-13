@@ -1,22 +1,26 @@
 """Tipos module."""
 
-from . import MENSUAL, SEMESTRAL, CUATRIMESTRAL, TRIMESTRAL
+from . import CUATRIMESTRAL, MENSUAL, SEMESTRAL, TRIMESTRAL
 
 
-def interes_mensual_simple(rate):
-    return rate / MENSUAL
+def simple_interest_rate(rate, temp_mode=MENSUAL):
+    return rate / temp_mode
 
 
-def interes_semestral_simple(rate):
-    return rate / SEMESTRAL
+def montly_simple_interest_rate(rate):
+    return simple_interest_rate(rate, MENSUAL)
 
 
-def interes_cuatrimestral_simple(rate):
-    return rate / CUATRIMESTRAL
+def semestral_simple_interest_rate(rate):
+    return simple_interest_rate(rate, SEMESTRAL)
 
 
-def interes_trimestral_simple(rate):
-    return rate / TRIMESTRAL
+def cuatrimestral_simple_interest_rate(rate):
+    return simple_interest_rate(rate, CUATRIMESTRAL)
+
+
+def trimestral_simple_interest_rate(rate):
+    return simple_interest_rate(rate, TRIMESTRAL)
 
 
 def interes_anual_simple(rate, temp_mode):
