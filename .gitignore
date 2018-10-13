@@ -23,6 +23,7 @@ pip-log.txt
 .tox
 .pytest_cache/
 .cov_html/
+coverage.xml
 
 #Translations
 *.mo
