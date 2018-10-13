@@ -2,6 +2,7 @@
 
 from .. import ANUAL
 
+
 class PrestamoFrances:
 
     cuota = 0
