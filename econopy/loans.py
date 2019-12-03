@@ -1,4 +1,4 @@
-"""Prestamos module."""
+"""Loan module."""
 
 from econopy.constants import ANUAL
 
@@ -28,18 +28,3 @@ class FrenchLoan(BaseLoan):
             self.interest_rate*(
                 1 + self.interest_rate)**self.periodos) / (-1 + (
                     1 + self.interest_rate)**self.periodos)
-
-    # def calcula_tabla_amortizacion(self):
-    #     self.capital_vivo.append(self.principal)
-    #     self.cuotas_interes.append(0)
-    #     self.cuotas_amortizacion.append(0)
-    #     self.total_amortizado.append(0)
-    #     for periodo in range(1, self.periodos+1):
-    #         interes = self.capital_vivo[periodo-1]*self.interes
-    #         amortizado = self.cuota - interes
-    #         self.cuotas_interes.append(interes)
-    #         self.cuotas_amortizacion.append(amortizado)
-    #         self.capital_vivo.append(
-    #             self.capital_vivo[periodo-1]-amortizado)
-    #         self.total_amortizado.append(
-    #             self.total_amortizado[periodo-1]+amortizado)

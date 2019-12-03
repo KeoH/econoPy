@@ -1,4 +1,4 @@
-"""Tipos module."""
+"""Rates module."""
 
 from econopy.constants import CUATRIMESTRAL, MENSUAL, SEMESTRAL, TRIMESTRAL
 
