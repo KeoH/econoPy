@@ -1,0 +1,12 @@
+"""Constants Module."""
+
+IS = 0.2
+VAT = 0.21
+
+SEMESTRAL = 2
+MENSUAL = 12
+ANUAL = 1
+CUATRIMESTRAL = 3
+TRIMESTRAL = 4
+BIANUAL = 0.5
+BIMENSUAL = 6

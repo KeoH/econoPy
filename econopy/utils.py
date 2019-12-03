@@ -1,4 +1,4 @@
-from . import VAT
+from econopy.constants import VAT
 
 
 def deflate_vat(amount, vat=VAT):

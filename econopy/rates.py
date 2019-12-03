@@ -1,6 +1,6 @@
 """Tipos module."""
 
-from . import CUATRIMESTRAL, MENSUAL, SEMESTRAL, TRIMESTRAL
+from econopy.constants import CUATRIMESTRAL, MENSUAL, SEMESTRAL, TRIMESTRAL
 
 
 def simple_interest_rate(rate, temp_mode=MENSUAL):
